@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TROLLGUY – You Mad?</title>
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/en/9/9a/Trollface_non-free.png">
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      color: #eee;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #000;
+    }
+
+    .banner {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 1rem 0 0.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    .troll-img {
+      width: 180px;
+      animation: shake 0.4s infinite;
+      margin: 30px auto;
+    }
+
+    @keyframes shake {
+      0% { transform: translate(1px, 1px) rotate(0deg); }
+      25% { transform: translate(-1px, -2px) rotate(-1deg); }
+      50% { transform: translate(-3px, 0px) rotate(1deg); }
+      75% { transform: translate(3px, 2px) rotate(0deg); }
+      100% { transform: translate(1px, -1px) rotate(1deg); }
+    }
+
+    .btn {
+      padding: 12px 24px;
+      font-size: 1.2rem;
+      background: #00ff88;
+      color: #000;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #ff00aa;
+      transform: scale(1.08) rotate(3deg);
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    .alert-box {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ff4444;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 10px;
+      display: none;
+      font-weight: bold;
+      z-index: 99;
+    }
+
+    .chat-embed {
+      margin-top: 40px;
+      padding: 0 20px;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="alert-box" id="alertBox">🚨 YOU JUST GOT TROLLED 🚨</div>
+
+  <header>
+    <img src="https://raw.githubusercontent.com/OmniProof/TrollGuy/refs/heads/main/IMG_6828.jpeg" alt="Troll Guy Banner" class="banner" />
+  </header>
+
+  <h1>JUST A TROLL GUY</h1>
+  <p>Solana-powered degeneracy with a smirk 😏</p>
+  <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Trollface_non-free.png" alt="Trollface" class="troll-img" />
+
+  <button class="btn" onclick="trollUser()">Buy on Pump.fun</button>
+
+  <div class="footer">
+    Contract: <code>5uPoTbxtzmYKVUpJaHKnciVdnLCwwDk1wdPQh7adpump</code><br/>
+    Twitter: <a href="https://x.com/trollguysol" target="_blank" style="color:#00ff88">@trollguysol</a>
+  </div>
+
+  <div class="chat-embed">
+    <h2>🧃 Live Troll Feed</h2>
+    <blockquote class="twitter-timeline" data-theme="dark" data-height="500" data-chrome="transparent nofooter noborders" href="https://twitter.com/trollguysol">Tweets by @trollguysol</blockquote>
+  </div>
+
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  <script>
+    function trollUser() {
+      const alert = document.getElementById('alertBox');
+      alert.style.display = 'block';
+      setTimeout(() => {
+        window.location.href = 'https://pump.fun/5uPoTbxtzmYKVUpJaHKnciVdnLCwwDk1wdPQh7adpump';
+      }, 1800);
+    }
+
+    // Optional troll sound
+    const laugh = new Audio('https://www.myinstants.com/media/sounds/trollolololololol.mp3');
+    setTimeout(() => laugh.play(), 1500);
+  </script>
+
+</body>
+</html>
