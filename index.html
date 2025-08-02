@@ -15,24 +15,33 @@
       overflow-x: hidden;
     }
 
-    header {
-      background: #000;
+    .alert-box {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ff4444;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      z-index: 9999;
+      display: none;
     }
 
     .banner {
       width: 100%;
-      max-width: 100%;
       height: auto;
     }
 
     h1 {
       font-size: 2.5rem;
-      margin: 1rem 0 0.5rem;
+      margin-top: 1rem;
     }
 
     p {
-      font-size: 1.1rem;
-      margin: 0;
+      font-size: 1.2rem;
+      margin: 0.5rem 0 1rem;
     }
 
     .troll-img {
@@ -50,9 +59,9 @@
     }
 
     .btn {
-      padding: 12px 24px;
+      padding: 14px 28px;
       font-size: 1.2rem;
-      background: #00ff88;
+      background: #ff00aa;
       color: #000;
       border: none;
       border-radius: 10px;
@@ -62,8 +71,8 @@
     }
 
     .btn:hover {
-      background: #ff00aa;
-      transform: scale(1.08) rotate(3deg);
+      background: #00ff88;
+      transform: scale(1.1) rotate(3deg);
     }
 
     .footer {
@@ -72,34 +81,19 @@
       color: #888;
     }
 
-    .alert-box {
-      position: fixed;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #ff4444;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 10px;
-      display: none;
-      font-weight: bold;
-      z-index: 99;
-    }
-
     .chat-embed {
       margin-top: 40px;
       padding: 0 20px;
     }
 
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2rem;
-      }
+    a {
+      color: #00ff88;
+      text-decoration: none;
+    }
 
-      .btn {
-        font-size: 1rem;
-        padding: 10px 20px;
-      }
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      .btn { font-size: 1rem; padding: 10px 20px; }
     }
   </style>
 </head>
@@ -107,24 +101,23 @@
 
   <div class="alert-box" id="alertBox">🚨 YOU JUST GOT TROLLED 🚨</div>
 
-  <header>
-    <img src="https://raw.githubusercontent.com/OmniProof/TrollGuy/refs/heads/main/IMG_6828.jpeg" alt="Troll Guy Banner" class="banner" />
-  </header>
+  <img src="https://raw.githubusercontent.com/OmniProof/TrollGuy/refs/heads/main/IMG_6828.jpeg" alt="Troll Banner" class="banner" />
 
   <h1>JUST A TROLL GUY</h1>
   <p>Solana-powered degeneracy with a smirk 😏</p>
-  <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Trollface_non-free.png" alt="Trollface" class="troll-img" />
+
+  <img src="https://raw.githubusercontent.com/OmniProof/TrollGuy/refs/heads/main/IMG_6832.jpeg" alt="Trollface" class="troll-img" />
 
   <button class="btn" onclick="trollUser()">Buy on Pump.fun</button>
 
   <div class="footer">
-    Contract: <code>5uPoTbxtzmYKVUpJaHKnciVdnLCwwDk1wdPQh7adpump</code><br/>
-    Twitter: <a href="https://x.com/trollguysol" target="_blank" style="color:#00ff88">@trollguysol</a>
+    <p>Contract: <code>5uPoTbxtzmYKVUpJaHKnciVdnLCwwDk1wdPQh7adpump</code></p>
+    <p>Twitter: <a href="https://x.com/trollguysol" target="_blank">@trollguysol</a></p>
   </div>
 
   <div class="chat-embed">
-    <h2>🧃 Live Troll Feed</h2>
-    <blockquote class="twitter-timeline" data-theme="dark" data-height="500" data-chrome="transparent nofooter noborders" href="https://twitter.com/trollguysol">Tweets by @trollguysol</blockquote>
+    <h2>💬 Live Troll Feed</h2>
+    <blockquote class="twitter-timeline" data-theme="dark" data-height="500" href="https://twitter.com/trollguysol">Tweets by @trollguysol</blockquote>
   </div>
 
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
